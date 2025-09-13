@@ -8,7 +8,7 @@ import GetInTouchCard from "@/components/pages/home-one/GetInTouchCard.vue";
 import LatestCardLandingOne from "@/components/pages/home-one/LatestCardLandingOne.vue";
 import ProfileCard from "@/components/pages/home-one/ProfileCard.vue";
 import SkillsCardAnimationOne from "@/components/pages/home-one/SkillsCardAnimationOne.vue";
-import TitleCard from "@/components/pages/home-one/TitleCard.vue";
+import TitleCard from "@/components/pages/home-three/TitleCard.vue";
 </script>
 
 <template>
