@@ -10,18 +10,19 @@ import ProfileCard from "@/components/pages/home-one/ProfileCard.vue";
 import SkillsCardAnimationOne from "@/components/pages/home-one/SkillsCardAnimationOne.vue";
 import TitleCard from "@/components/pages/home-one/TitleCard.vue";
 </script>
+
 <template>
     <section class="parent m-t-60px container position-relative z-2">
-        <BioCard class="div1" />
-        <AllBlogsCard class="div2" />
-        <TitleCard class="div3" />
-        <ProfileCard class="div4" />
-        <AllServiceCard class="div5" />
-        <SkillsCardAnimationOne class="div6" />
-        <GetInTouchCard class="div7" />
-        <LatestCardLandingOne class="div8" />
-        <ExperienceCard class="div9" />
-        <AllProjects class="div10" />
+        <BioCard class="BioCard" />
+        <AllBlogsCard class="AllBlogsCard" />
+        <TitleCard class="TitleCard" />
+        <ProfileCard class="ProfileCard" />
+        <AllServiceCard class="AllServiceCard" />
+        <SkillsCardAnimationOne class="SkillsCardAnimationOne" />
+        <GetInTouchCard class="GetInTouchCard" />
+        <LatestCardLandingOne class="LatestCardLandingOne" />
+        <ExperienceCard class="ExperienceCard" />
+        <AllProjects class="AllProjects" />
     </section>
 </template>
 
@@ -29,64 +30,64 @@ import TitleCard from "@/components/pages/home-one/TitleCard.vue";
 .parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(8, auto);
     gap: 1rem;
 }
 
-.div1 {
+.BioCard {
     grid-row: span 4 / span 4;
 }
 
-.div2 {
+.AllBlogsCard {
     grid-row: span 2 / span 2;
     grid-column-start: 1;
     grid-row-start: 5;
 }
 
-.div3 {
+.TitleCard {
     grid-row: span 2 / span 2;
     grid-column-start: 2;
     grid-row-start: 1;
 }
 
-.div4 {
+.ProfileCard {
     grid-row: span 2 / span 2;
     grid-column-start: 3;
     grid-row-start: 1;
 }
 
-.div5 {
+.AllServiceCard {
     grid-column: span 2 / span 2;
     grid-row: span 4 / span 4;
     grid-column-start: 2;
     grid-row-start: 3;
 }
 
-.div6 {
+.SkillsCardAnimationOne {
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-column-start: 1;
     grid-row-start: 7;
 }
 
-.div7 {
+.GetInTouchCard {
     grid-row: span 2 / span 2;
     grid-column-start: 3;
     grid-row-start: 7;
 }
 
-.div8 {
+.LatestCardLandingOne {
     grid-column-start: 4;
     grid-row-start: 1;
 }
 
-.div9 {
+.ExperienceCard {
     grid-row: span 4 / span 4;
     grid-column-start: 4;
     grid-row-start: 2;
 }
 
-.div10 {
+.AllProjects {
     grid-row: span 3 / span 3;
     grid-column-start: 4;
     grid-row-start: 6;
