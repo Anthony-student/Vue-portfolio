@@ -234,23 +234,23 @@
 }
 // title card
 .title-card {
-  padding: 32px 51px 65px 32px;
+  padding: 32px 19px 65px 28px;
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 8px;
   @media (max-width: 1400px) {
-    padding: 32px 51px 35px 32px;
+    padding-bottom: 35px;
   }
 
   @media (max-width: 1200px) {
-    padding: 32px 51px 42px 32px;
+    padding-bottom: 42px;
   }
   @media (max-width: 992px) {
-    padding: 32px 51px 50px 32px;
+    padding-bottom: 50px;
   }
   @media (max-width: 768px) {
-    padding: 32px 51px 55px 32px;
+    padding-bottom: 55px;
   }
 
   &__title-sub-text {
