@@ -5,25 +5,74 @@ import LinkPrimary from "@/components/shared/LinkPrimary.vue";
 </script>
 
 <template>
-  <CustomTransition>
-    <div class="card-style all-blog-card">
-      <div class="all-blog-card__title-text">
-        <p class="heading-4">Articles &</p>
-        <p class="all-blog-card__title-text-two heading-4">Publications</p>
-      </div>
+    <CustomTransition>
+        <section class="card-style all-blog-card">
+            <article class="all-blog-card__title-text">
+                <p class="heading-4">Articles &</p>
+                <p class="all-blog-card__title-text-two heading-4">
+                    Publications
+                </p>
+            </article>
 
-      <LinkPrimary
-        linkText="All Blogs"
-        link="/blogs"
-        class="all-blog-card__link"
-      />
-      <img
-        :src="allBlogsStar"
-        alt="Title Card Shape"
-        class="all-blog-card__shapes-image-articles light-mood-image-shape"
-      />
-    </div>
-  </CustomTransition>
+            <LinkPrimary
+                linkText="All Blogs"
+                link="/blogs"
+                class="all-blog-card__link"
+            />
+            <img
+                :src="allBlogsStar"
+                alt="Title Card Shape"
+                class="all-blog-card__shapes-image-articles light-mood-image-shape"
+            />
+        </section>
+    </CustomTransition>
 </template>
 
-<style scoped></style>
+<style scoped>
+.all-blog-card__link {
+    margin-top: 53px;
+}
+
+@media (max-width: 1400px) {
+    .all-blog-card__link {
+        margin-top: 53px;
+    }
+}
+
+@media (max-width: 992px) {
+    .all-blog-card__link {
+        margin-top: 37px;
+    }
+}
+
+/* All Blogs card */
+.all-blog-card {
+    padding: 32px;
+    position: relative;
+}
+
+@media (max-width: 1400px) {
+    .all-blog-card {
+        padding: 20px;
+    }
+}
+
+.all-blog-card__title-text-two {
+    margin-left: 38px;
+}
+
+.all-blog-card__shapes-image-articles {
+    position: absolute;
+    right: 24px;
+    top: 0;
+    flex-shrink: 0;
+}
+
+[dir="rtl"] .all-blog-card__shapes-image-articles {
+    position: absolute;
+    left: 24px;
+    top: 0;
+    right: auto !important;
+    flex-shrink: 0;
+}
+</style>
