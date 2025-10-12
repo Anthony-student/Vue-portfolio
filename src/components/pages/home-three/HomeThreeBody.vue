@@ -13,14 +13,14 @@ import TitleCard from "@/components/pages/home-three/TitleCard.vue";
 
 <template>
     <section class="parent m-t-60px container position-relative z-2">
-        <BioCard class="BioCard" />
-        <AllBlogsCard class="AllBlogsCard" />
+        <BioCard class="BioCard" /><!-- done -->
+        <AllBlogsCard class="AllBlogsCard" /><!-- done -->
         <TitleCard class="TitleCard" /> <!-- done -->
-        <ProfileCard class="ProfileCard" />
+        <ProfileCard class="ProfileCard" /><!-- done -->
         <AllServiceCard class="AllServiceCard" />
         <SkillsCardAnimationOne class="SkillsCardAnimationOne" />
         <GetInTouchCard class="GetInTouchCard" />
-        <LatestCardLandingOne class="LatestCardLandingOne" />
+        <LatestCardLandingOne class="LatestCardLandingOne" /><!-- (partely) done -->
         <ExperienceCard class="ExperienceCard" />
         <AllProjects class="AllProjects" />
     </section>
