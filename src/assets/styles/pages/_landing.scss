@@ -404,6 +404,10 @@
     float: left;
     transition: animation 0.2s ease-out;
 
+    .latest-works {
+      display: inline;
+    }
+
     .star-image {
       padding: 0 10px;
     }

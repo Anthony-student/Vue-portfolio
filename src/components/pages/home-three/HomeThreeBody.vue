@@ -15,7 +15,7 @@ import TitleCard from "@/components/pages/home-three/TitleCard.vue";
     <section class="parent m-t-60px container position-relative z-2">
         <BioCard class="BioCard" />
         <AllBlogsCard class="AllBlogsCard" />
-        <TitleCard class="TitleCard" />
+        <TitleCard class="TitleCard" /> <!-- done -->
         <ProfileCard class="ProfileCard" />
         <AllServiceCard class="AllServiceCard" />
         <SkillsCardAnimationOne class="SkillsCardAnimationOne" />
