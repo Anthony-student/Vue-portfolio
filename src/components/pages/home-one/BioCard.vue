@@ -7,8 +7,8 @@ import LinkPrimary from "@/components/shared/LinkPrimary.vue";
 </script>
 <template>
   <CustomTransition>
-    <div class="card-style d-flex flex-column bio-card">
-      <div class="bio-rounded-image">
+    <section class="card-style d-flex flex-column bio-card">
+      <figure class="bio-rounded-image">
         <img
           :src="bioRoundedImage"
           alt="Bio rounded Image"
@@ -19,11 +19,55 @@ import LinkPrimary from "@/components/shared/LinkPrimary.vue";
           alt="Bio Image"
           class="bio-image position-absolute"
         />
-      </div>
+      </figure>
       <ButtonPrimary />
       <LinkPrimary linkText="Biography" link="/about-us" />
-    </div>
+    </section>
   </CustomTransition>
 </template>
 
-<style scoped></style>
+<style scoped>
+.bio-card {
+  padding: 32px;
+}
+
+@media (max-width: 1400px) {
+  .bio-card {
+    padding: 20px;
+  }
+}
+
+.bio-card .bio-rounded-image {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+}
+
+.bio-card .bio-rounded-image .bio-rounded-text-image {
+  animation: rotate 15s linear infinite;
+}
+
+@media (max-width: 1400px) {
+  .bio-card .bio-rounded-image .bio-rounded-text-image {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.bio-card .bio-rounded-image .bio-image {
+  background: var(--secondary-color);
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1400px) {
+  .bio-card .bio-rounded-image .bio-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+</style>
+
