@@ -1,29 +1,59 @@
-<script setup lang="ts">
+<template>
+    <CustomTransition>
+        <section class="card-style get-in-touch-card">
+            <slot name="title">
+                <h4 v-if="title">{{ title }}</h4>
+                <h4 v-else class="get-in-touch-card__title-text">
+                    <span class="heading-4">let's work</span>
+                    <span class="get-in-touch-card__title-text-two heading-4">
+                        Together...!
+                    </span>
+                </h4>
+            </slot>
+            <LinkPrimary
+                :linkText="linkText"
+                link="/contact"
+                class="get-in-touch-card__link"
+            />
+            <img
+                :src="getInTouchShape"
+                alt=""
+                class="get-in-touch-card__image-shape"
+                :class="shapeClass"
+            />
+        </section>
+    </CustomTransition>
+</template>
+
+<script>
 import getInTouchShape from "@/assets/image/get-in-touch-shape.png";
 import CustomTransition from "@/components/shared/CustomTransition.vue";
 import LinkPrimary from "@/components/shared/LinkPrimary.vue";
+
+export default {
+    components: { CustomTransition, LinkPrimary },
+    props: {
+        title: String,
+        linkText: {
+            type: String,
+            default: "Get in Touch",
+        },
+        useAnimation: {
+            type: Boolean,
+            default: true,
+        },
+    },
+    computed: {
+        shapeClass() {
+            return this.useAnimation ? "scale-up-down" : "";
+        },
+    },
+    data() {
+        return {
+            getInTouchShape,
+        };
+    },
+};
 </script>
-<template>
-  <CustomTransition>
-    <div class="card-style get-in-touch-card">
-      <div class="get-in-touch-card__title-text">
-        <p class="heading-4">Work with</p>
-        <p class="get-in-touch-card__title-text-two heading-4">
-          Gole Layla...!
-        </p>
-      </div>
-      <LinkPrimary
-        linkText="Get in Touch"
-        link="/contact"
-        class="get-in-touch-card__link"
-      />
-      <img
-        :src="getInTouchShape"
-        alt="Get In Touch Shape"
-        class="get-in-touch-card__image-shape scale-up-down light-mood-image-shape"
-      />
-    </div>
-  </CustomTransition>
-</template>
 
 <style scoped></style>
