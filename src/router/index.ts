@@ -6,6 +6,7 @@ import BlogDetails from "@/pages/BlogDetails.vue";
 import Blogs from "@/pages/Blogs.vue";
 import Contact from "@/pages/Contact.vue";
 import CustomHome from "@/pages/customHome.vue";
+import CustomServices from "@/pages/customServices.vue";
 import Home from "@/pages/Home.vue";
 import HomeTwo from "@/pages/HomeTwo.vue";
 import NotFound from "@/pages/NotFound.vue";
@@ -25,6 +26,11 @@ const router = createRouter({
       path: "/customHome",
       component: CustomHome,
       meta: { title: "Custom Home"}
+    },
+    {
+      path: "/customServices",
+      component: CustomServices,
+      meta: { title: "Custom Services" },
     },
     {
       path: "/landing-page-two",
