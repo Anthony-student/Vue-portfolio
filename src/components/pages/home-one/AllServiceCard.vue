@@ -7,61 +7,95 @@ import service4 from "@/assets/image/service-4.png";
 import serviceThumb from "@/assets/image/service-thum.png";
 import CustomTransition from "@/components/shared/CustomTransition.vue";
 import LinkPrimary from "@/components/shared/LinkPrimary.vue";
+
 const serviceData = [
-  {
-    image: service1,
-    title: "UI/UX Design",
-  },
-  {
-    image: service2,
-    title: "Digital Marketing",
-  },
-  {
-    image: service3,
-    title: "Brand Identity",
-  },
-  {
-    image: service4,
-    title: "Web Development",
-  },
+    {
+        image: service1,
+        title: "Design Precision",
+    },
+    {
+        image: service2,
+        title: "maintainable code",
+    },
+    {
+        image: service3,
+        title: "Accessible UI",
+    },
+    {
+        image: service4,
+        title: "Web Development",
+    },
+    // {
+    //   image: ,
+    //   title: "Semantic frontend",
+    // },
 ];
 </script>
+
 <template>
-  <CustomTransition>
-    <div class="card-style all-services-card">
-      <span class="all-services-card__sub-title heading-4">
-        Services Offering
-      </span>
-      <div class="all-services-card__services">
-        <div
-          v-for="({ image, title }, index) in serviceData"
-          class="all-services-card__services-service"
-        >
-          <img :src="image" alt="Service One" />
-          <p>{{ title }}</p>
-        </div>
-      </div>
-      <div class="all-services-card__title">
-        <h2 class="heading-2">Things I’m good at</h2>
-        <img
-          :src="serviceThumb"
-          width="{63}"
-          height="{56}"
-          alt="Service Thumbs"
-        />
-      </div>
-      <LinkPrimary
-        linkText="All Services"
-        link="/services"
-        class="all-services-card__link"
-      />
-      <img
-        :src="allServicesShape"
-        alt="Title Card Shape"
-        class="all-services-card__shapes-image light-mood-image-shape"
-      />
-    </div>
-  </CustomTransition>
+    <CustomTransition>
+        <section class="card-style all-services-card">
+            <h4 class="all-services-card__sub-title">Services Offering</h4>
+
+            <ul class="all-services-card__services">
+                <li
+                    v-for="service in serviceData"
+                    class="all-services-card__services-service"
+                    :key="service.id ?? service.title"
+                >
+                    <img
+                        :src="service.image"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <span>{{ service.title }}</span>
+                </li>
+            </ul>
+
+            <header class="all-services-card__title">
+                <h5 class="heading-2">Things I’m good at</h5>
+                <img
+                    :src="serviceThumb"
+                    width="56"
+                    height="56"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    decoding="async"
+                />
+            </header>
+
+            <LinkPrimary
+                linkText="All Services"
+                link="/customServices"
+                class="all-services-card__link"
+            />
+
+            <img
+                :src="allServicesShape"
+                alt="Title Card Shape"
+                class="all-services-card__shapes-image light-mood-image-shape"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+            />
+        </section>
+    </CustomTransition>
 </template>
 
-<style scoped></style>
+<style scoped>
+.all-services-card__services {
+    padding: 0;
+}
+
+.all-services-card__services-service > span {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 150%;
+    color: var(--white-neutral1);
+    opacity: 0.9;
+    text-align: center;
+}
+</style>
