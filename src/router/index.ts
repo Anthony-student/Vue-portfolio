@@ -33,6 +33,10 @@ const router = createRouter({
       meta: { title: "Custom Services" },
     },
     {
+      path: "/CustomAll-projects",
+      component: AllProjectsPage,
+      meta: { title: "Custom all projects" },
+    },{
       path: "/landing-page-two",
       component: HomeTwo,
       meta: { title: "Home Two - Grid System Unique Portfolio VueJs Template" },
