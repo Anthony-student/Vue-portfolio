@@ -9,13 +9,13 @@ defineProps<{
 }>();
 </script>
 <template>
-  <div class="experience-card__item">
+  <article class="experience-card__item">
     <p class="experience-card__item-number display-4">
       {{ counterElement }}
       <CustomCounterUp :counterNumber="counterNumber" />
     </p>
-    <p class="experience-card__item-text textM">{{ text }}</p>
-  </div>
+    <h4 class="experience-card__item-text textM">{{ text }}</h4>
+  </article>
 </template>
 
 <style scoped></style>
