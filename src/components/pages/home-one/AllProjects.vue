@@ -5,30 +5,40 @@ import CustomTransition from "@/components/shared/CustomTransition.vue";
 import LinkPrimary from "@/components/shared/LinkPrimary.vue";
 </script>
 <template>
-  <CustomTransition>
-    <div class="card-style all-projects-card">
-      <div class="all-projects-card__title-text">
-        <p class="heading-4">See My</p>
-        <p class="all-projects-card__title-text-two heading-4">Latest Works</p>
-      </div>
+    <CustomTransition>
+        <section class="card-style all-projects-card">
+            <h4 class="all-projects-card__title-text">
+                <span class="all-projects-card__title-text-one heading-4">See My</span>
+                <span class="all-projects-card__title-text-two heading-4">
+                    Latest Works
+                </span>
+            </h4>
 
-      <img
-        :src="allProjectImage"
-        alt="All Project Image"
-        class="all-projects-card__image"
-      />
-      <LinkPrimary
-        linkText="All Projects"
-        link="/all-projects"
-        class="all-projects-card__link"
-      />
-      <img
-        :src="allProjectStars"
-        alt="All Project Stars"
-        class="all-projects-card__image-star scale-up-down light-mood-image-shape"
-      />
-    </div>
-  </CustomTransition>
+            <img
+                :src="allProjectImage"
+                alt="All Project Image"
+                class="all-projects-card__image"
+            />
+            <LinkPrimary
+                linkText="All Projects"
+                link="/all-projects"
+                class="all-projects-card__link"
+            />
+
+            <img
+                :src="allProjectStars"
+                alt=""
+                class="all-projects-card__image-star scale-up-down light-mood-image-shape"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+            />
+        </section>
+    </CustomTransition>
 </template>
 
-<style scoped></style>
+<style scoped>
+.all-projects-card__title-text-one {
+  display: block;
+}
+</style>
