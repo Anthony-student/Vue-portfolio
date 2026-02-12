@@ -1,5 +1,12 @@
 export const personalData = {
     name: "Anthony Inocencio ramos",
+    title: {
+        full: "Software Developer",
+        dual: {
+            one: "Software",
+            Two: "Developer"
+        }
+    },
     socials: {
         linkedIn: "https://www.linkedin.com/in/anthony-inoc%C3%AAncio-ramos-b89003277/",
         instagram: "https://www.instagram.com/anthony.air/"
@@ -22,8 +29,52 @@ export const personalData = {
         },
         // {
         //     name: "TOTAL COMMITS",
-        //     count: "115",
+        //     count: "115 + 754 + ",
         //     prefix: "+",
         // }
-    ]
+        // {
+        //     name: "UNHAPPY CLIENTS",
+        //     count: "00",
+        //     Prefix: "",
+        // }
+    ],
+    employments: [
+        {
+            startDate: "2023",
+            endDate: "Present",
+            function: "Full-stack dev",
+            company: "Qmobiel"
+        },
+        {
+            startDate: "2022",
+            endDate: "2023",
+            function: "Front-end Dev, toegankelijksheid adviseur",
+            company: "Buro CITE"
+        }
+    ],
+    abilities: [
+        "Web Development",
+        "UI/UX design",
+        "Toegankelijkheid",
+        "Coding infrastructure",
+        "Front-end testing",
+        "Code maintainance",
+    ],
+    projects: [
+        // --- block 1 ---
+        { id: 'p13r', image: "", width: 636, height: 664, wide: false, long: true, side: 'left', title: "something", text: "lorem  ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+        { id: 'p11a', image: "", width: 636, height: 320, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+        { id: 'p12a', image: "", width: 636, height: 320, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+        { id: 'p21a', image: "", width: 1296, height: 400, wide: true, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+        { id: 'p31a', image: "", width: 636, height: 393, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+        { id: 'p32a', image: "", width: 636, height: 393, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+
+        // --- block 2 ---
+        { id: 'p13l', image: "", width: 636, height: 664, wide: false, long: true, side: 'right', title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+        { id: 'p11b', image: "", width: 636, height: 320, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+        { id: 'p12b', image: "", width: 636, height: 320, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+        { id: 'p21b', image: "", width: 1296, height: 400, wide: true, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+        { id: 'p31b', image: "", width: 636, height: 393, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+        { id: 'p32b', image: "", width: 636, height: 393, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+      ],
 }
