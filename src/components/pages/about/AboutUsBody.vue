@@ -12,24 +12,50 @@ import { defineProps } from "vue";
 defineProps<{ image: string }>();
 </script>
 <template>
-  <div class="mt-xxl-10 mt-xl-8 mt-6 position-relative z-2">
-    <div class="about-body">
-      <div class="about-body__1st-row">
-        <HelloCard />
-        <AboutCardProfile :image="image" />
-      </div>
-      <div class="about-body__2nd-row">
-        <AboutMyExperience />
-        <AboutWhatIDo />
-        <ExperienceInNumber />
-      </div>
-      <div class="about-body__3rd-row">
-        <ProfileCardAbout />
-        <AboutEducation />
-        <AboutLetsWorks />
-      </div>
+    <div class="mt-xxl-10 mt-xl-8 mt-6 position-relative z-2">
+        <div class="about-body">
+            <!-- <div class="about-body__1st-row">
+            </div> -->
+            <HelloCard />
+            <AboutCardProfile :image="image" />
+            <div class="about-body__2nd-row">
+                <AboutMyExperience />
+                <AboutWhatIDo />
+                <ExperienceInNumber />
+            </div>
+            <div class="about-body__3rd-row">
+                <ProfileCardAbout />
+                <AboutEducation />
+                <AboutLetsWorks />
+            </div>
+        </div>
     </div>
-  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.about-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.about-body > *:nth-child(1) {
+    grid-column-start: 1;
+    grid-column: span 2;
+}
+
+.about-body > *:nth-child(2) {
+    grid-column-start: 2;
+    grid-column: span 1;
+}
+
+.about-body > *:nth-child(3) {
+    grid-column-start: 1;
+    grid-column: span 2;
+}
+
+.about-body > *:nth-child(4) {
+    grid-column-start: 1;
+    grid-column: span 2;
+}
+</style>

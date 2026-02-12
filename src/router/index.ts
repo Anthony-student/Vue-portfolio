@@ -5,6 +5,7 @@ import AllProjectsPage from "@/pages/AllProjectsPage.vue";
 import BlogDetails from "@/pages/BlogDetails.vue";
 import Blogs from "@/pages/Blogs.vue";
 import Contact from "@/pages/Contact.vue";
+import CustomAbout from "@/pages/CustomAbout.vue";
 import CustomHome from "@/pages/customHome.vue";
 import CustomServices from "@/pages/customServices.vue";
 import Home from "@/pages/Home.vue";
@@ -36,7 +37,13 @@ const router = createRouter({
       path: "/CustomAll-projects",
       component: AllProjectsPage,
       meta: { title: "Custom all projects" },
-    },{
+    },
+    {
+      path: "/CustomAbout-us",
+      component: CustomAbout,
+      meta: { title: "Custom About us" },
+    },
+    {
       path: "/landing-page-two",
       component: HomeTwo,
       meta: { title: "Home Two - Grid System Unique Portfolio VueJs Template" },
