@@ -39,9 +39,9 @@ const serviceData = [
 
             <ul class="all-services-card__services">
                 <li
-                    v-for="service in serviceData"
+                    v-for="(service, index) in serviceData"
                     class="all-services-card__services-service"
-                    :key="service.id ?? service.title"
+                    :key="`${service.title}_${index}`"
                 >
                     <img
                         :src="service.image"

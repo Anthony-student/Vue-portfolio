@@ -3,7 +3,7 @@ import { defineProps } from "vue";
 
 defineProps({
   link: {
-    type: String || Object,
+    type: [String, Object],
     default: "",
   },
   text: {
