@@ -12,7 +12,7 @@
             </slot>
             <LinkPrimary
                 :linkText="linkText"
-                link="/contact"
+                :link="{ name: 'contact' }"
                 class="get-in-touch-card__link"
             />
             <img

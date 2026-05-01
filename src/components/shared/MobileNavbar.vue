@@ -140,7 +140,7 @@ const isActive = (item: MenuItem) => {
     class="mobile-sidebar-containe"
     :class="`${sidebarToggle ? 'mobile-sidebar-show' : 'mobile-sidebar-hide'}`"
   >
-    <router-link to="/" class="d-block logo-main-mobile">
+    <router-link :to="{ name: 'home'}" class="d-block logo-main-mobile">
       Bento<span>X</span>
     </router-link>
 

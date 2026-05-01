@@ -11,6 +11,7 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@phosphor-icons/vue": "^2.1.6",
     "@vueuse/core": "^10.8.0",
     "bootstrap": "^5.3.3",

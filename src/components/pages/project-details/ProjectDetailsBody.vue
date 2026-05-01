@@ -48,7 +48,7 @@ const listArrayThree = [
       />
     </div>
     <router-link
-      to="/all-projects"
+      :to="{ name: 'all-projects' }"
       class="header-title next-project heading-4 m-t-60px z-2 position-relative"
     >
       Next Projects

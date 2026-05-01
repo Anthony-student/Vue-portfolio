@@ -5,7 +5,7 @@ import { PhPaperPlaneTilt } from "@phosphor-icons/vue";
 
 <template>
     <router-link
-      to="/about-us"
+      :to="{ name: 'about-us' }"
       class="button-primary text-center justify-content-center gap-2 d-inline-flex align-items-center"
     >
       <p class="n0-color textM primary-button-text">{{ templateText.BioCard.buttonText }}</p>

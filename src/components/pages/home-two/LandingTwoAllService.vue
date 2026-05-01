@@ -7,7 +7,7 @@ import LinkPrimaryTwo from "./LinkPrimaryTwo.vue";
   <CustomTransition>
     <div class="all-service card-style-two">
       <p class="heading-4">Services</p>
-      <LinkPrimaryTwo link="/services" linkText="All Services" />
+      <LinkPrimaryTwo :link="{ name: 'services'}" linkText="All Services" />
       <img
         :src="image"
         alt="All Service Shape"

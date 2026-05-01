@@ -16,7 +16,7 @@ import LinkPrimary from "@/components/shared/LinkPrimary.vue";
 
             <LinkPrimary
                 linkText="All Blogs"
-                link="/blogs"
+                :link="{ name: 'blogs'}"
                 class="all-blog-card__link"
             />
             <img

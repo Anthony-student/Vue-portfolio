@@ -8,7 +8,10 @@ import LinkPrimaryTwo from "../home-two/LinkPrimaryTwo.vue";
             <h4 class="heading-4 about-get-in-touch__title">
                 Let’s Works Together...!
             </h4>
-            <LinkPrimaryTwo link="/contact" linkText="Get In Touch" />
+            <LinkPrimaryTwo
+                :link="{ name: 'contact' }"
+                linkText="Get In Touch"
+            />
         </section>
     </CustomTransition>
 </template>

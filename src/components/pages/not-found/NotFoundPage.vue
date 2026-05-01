@@ -13,7 +13,7 @@ import notFoundImage from "@/assets/image/not-found.png";
       The page you are looking for doesn&apos;t exist or has been moved
     </p>
     <div className="m-t-60px">
-      <router-link to="/" className=" back-to-home"> Back To Home </router-link>
+      <router-link :to="{ name: 'home'}" className=" back-to-home"> Back To Home </router-link>
     </div>
   </div>
 </template>

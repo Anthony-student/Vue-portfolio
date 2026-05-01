@@ -7,7 +7,7 @@ import LinkPrimaryTwo from "./LinkPrimaryTwo.vue";
   <CustomTransition>
     <div class="blogs card-style-two p-32px">
       <p class="heading-4">Blog</p>
-      <LinkPrimaryTwo link="/blogs" linkText="All Blog" />
+      <LinkPrimaryTwo :link="{ name: 'blogs'}" linkText="All Blog" />
       <img
         :src="image"
         alt="All Blog"

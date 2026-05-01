@@ -18,7 +18,7 @@ import SocialsLink from "@/components/shared/socialsLink.vue";
         </SocialsLink>
       </nav>
 
-      <LinkPrimary link="/about-us" linkText="Profiles" />
+      <LinkPrimary :link="{ name: 'about-us'}" linkText="Profiles" />
     </section>
   </CustomTransition>
 </template>

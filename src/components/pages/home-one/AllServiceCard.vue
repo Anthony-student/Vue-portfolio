@@ -69,7 +69,7 @@ const serviceData = [
 
             <LinkPrimary
                 linkText="All Services"
-                link="/customServices"
+                :link="{ name: 'services'}"
                 class="all-services-card__link"
             />
 

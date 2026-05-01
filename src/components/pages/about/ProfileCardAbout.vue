@@ -20,7 +20,7 @@ import SocialsLink from "@/components/shared/socialsLink.vue";
             <nav>
                 <span class="textM about-profile__text">Stay With Me</span>
                 <LinkPrimaryTwo
-                    link="/about-us"
+                    :link="{ name: 'about-us'}"
                     linkText="Profiles"
                     class="about-profile-link"
                 />

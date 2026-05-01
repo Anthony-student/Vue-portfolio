@@ -3,6 +3,11 @@ import { toRaw } from "vue";
 
 export const personalData = {
     name: "Anthony Inocencio ramos",
+    contactInfo: {
+        phoneNumber: "+31 6 3647 0448",
+        email: "anthonyair03@gmail.com",
+        address: "Rotterdam Lombardijen"
+    },
     title: {
         full: "Software Developer",
         dual: {
@@ -14,6 +19,7 @@ export const personalData = {
         linkedIn:
             "https://www.linkedin.com/in/anthony-inoc%C3%AAncio-ramos-b89003277/",
         instagram: "https://www.instagram.com/anthony.air/",
+        threads: "https://www.threads.com/@anthony.air"
     },
     experiences: [
         {

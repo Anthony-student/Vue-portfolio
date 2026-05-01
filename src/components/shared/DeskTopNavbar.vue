@@ -30,7 +30,7 @@ const isActive = (item: MenuItem) => {
 <template>
   <div class="desktop-navbar-container">
     <div>
-      <router-link to="/" class="logo-main"> Bento<span>X</span> </router-link>
+      <router-link :to="{ name: 'home'}" class="logo-main"> Bento<span>X</span> </router-link>
     </div>
     <ul class="desktop-menu-items" id="primary">
       <template v-for="item in navbarData" :key="item.id">
@@ -84,7 +84,7 @@ const isActive = (item: MenuItem) => {
         </li>
       </template>
     </ul>
-    <ArrowButton link="/" />
+    <ArrowButton :link="{name: 'contact'}" />
   </div>
 </template>
 
