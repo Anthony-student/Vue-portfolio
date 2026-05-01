@@ -1,15 +1,19 @@
+import BioCard from "@/components/pages/home-one/BioCard.vue";
+import { toRaw } from "vue";
+
 export const personalData = {
     name: "Anthony Inocencio ramos",
     title: {
         full: "Software Developer",
         dual: {
             one: "Software",
-            Two: "Developer"
-        }
+            Two: "Developer",
+        },
     },
     socials: {
-        linkedIn: "https://www.linkedin.com/in/anthony-inoc%C3%AAncio-ramos-b89003277/",
-        instagram: "https://www.instagram.com/anthony.air/"
+        linkedIn:
+            "https://www.linkedin.com/in/anthony-inoc%C3%AAncio-ramos-b89003277/",
+        instagram: "https://www.instagram.com/anthony.air/",
     },
     experiences: [
         {
@@ -43,14 +47,14 @@ export const personalData = {
             startDate: "2023",
             endDate: "Present",
             function: "Full-stack dev",
-            company: "Qmobiel"
+            company: "Qmobiel",
         },
         {
             startDate: "2022",
             endDate: "2023",
-            function: "Front-end Dev, toegankelijksheid adviseur",
-            company: "Buro CITE"
-        }
+            function: "Front-end Dev, accessibility adviseur",
+            company: "Buro CITE",
+        },
     ],
     abilities: [
         "Web Development",
@@ -62,19 +66,148 @@ export const personalData = {
     ],
     projects: [
         // --- block 1 ---
-        { id: 'p13r', image: "", width: 636, height: 664, wide: false, long: true, side: 'left', title: "something", text: "lorem  ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
-        { id: 'p11a', image: "", width: 636, height: 320, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
-        { id: 'p12a', image: "", width: 636, height: 320, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
-        { id: 'p21a', image: "", width: 1296, height: 400, wide: true, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
-        { id: 'p31a', image: "", width: 636, height: 393, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
-        { id: 'p32a', image: "", width: 636, height: 393, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
+        {
+            id: "p13r",
+            image: "",
+            width: 636,
+            height: 664,
+            wide: false,
+            long: true,
+            side: "left",
+            title: "something",
+            text: "lorem  ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd ",
+        },
+        {
+            id: "p11a",
+            image: "",
+            width: 636,
+            height: 320,
+            wide: false,
+            long: false,
+            side: null,
+            title: "something",
+            text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd ",
+        },
+        {
+            id: "p12a",
+            image: "",
+            width: 636,
+            height: 320,
+            wide: false,
+            long: false,
+            side: null,
+            title: "something",
+            text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd ",
+        },
+        {
+            id: "p21a",
+            image: "",
+            width: 1296,
+            height: 400,
+            wide: true,
+            long: false,
+            side: null,
+            title: "something",
+            text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd ",
+        },
+        {
+            id: "p31a",
+            image: "",
+            width: 636,
+            height: 393,
+            wide: false,
+            long: false,
+            side: null,
+            title: "something",
+            text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd ",
+        },
+        {
+            id: "p32a",
+            image: "",
+            width: 636,
+            height: 393,
+            wide: false,
+            long: false,
+            side: null,
+            title: "something",
+            text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd ",
+        },
 
         // --- block 2 ---
-        { id: 'p13l', image: "", width: 636, height: 664, wide: false, long: true, side: 'right', title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
-        { id: 'p11b', image: "", width: 636, height: 320, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
-        { id: 'p12b', image: "", width: 636, height: 320, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
-        { id: 'p21b', image: "", width: 1296, height: 400, wide: true, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
-        { id: 'p31b', image: "", width: 636, height: 393, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
-        { id: 'p32b', image: "", width: 636, height: 393, wide: false, long: false, side: null, title: "something", text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd " },
-      ],
-}
+        {
+            id: "p13l",
+            image: "",
+            width: 636,
+            height: 664,
+            wide: false,
+            long: true,
+            side: "right",
+            title: "something",
+            text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd ",
+        },
+        {
+            id: "p11b",
+            image: "",
+            width: 636,
+            height: 320,
+            wide: false,
+            long: false,
+            side: null,
+            title: "something",
+            text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd ",
+        },
+        {
+            id: "p12b",
+            image: "",
+            width: 636,
+            height: 320,
+            wide: false,
+            long: false,
+            side: null,
+            title: "something",
+            text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd ",
+        },
+        {
+            id: "p21b",
+            image: "",
+            width: 1296,
+            height: 400,
+            wide: true,
+            long: false,
+            side: null,
+            title: "something",
+            text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd ",
+        },
+        {
+            id: "p31b",
+            image: "",
+            width: 636,
+            height: 393,
+            wide: false,
+            long: false,
+            side: null,
+            title: "something",
+            text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd ",
+        },
+        {
+            id: "p32b",
+            image: "",
+            width: 636,
+            height: 393,
+            wide: false,
+            long: false,
+            side: null,
+            title: "something",
+            text: "lorem ipsum hnfuijreoro vniwer jhjniofrweo vjdfssjdf uijbnofdonofd jvcuioodwbnfjiwsd ",
+        },
+    ],
+    bio: {
+        introduction: {
+            one: "Hello,",
+            two: "I'm Anthony Inocencio Ramos",
+            three: "Software Developer.",
+        },
+        description:
+            "As a frontend-focused software developer, I build scalable, maintainable, and user-centered applications. With a strong foundation in modern frameworks and real-world project experience, I translate complex ideas into intuitive and performant digital solutions.",
+    },
+};

@@ -3,44 +3,40 @@ import groupShape from "@/assets/image/group-4.png";
 import bottomShape from "@/assets/image/shape-14.png";
 import CustomTransition from "@/components/shared/CustomTransition.vue";
 import { PhCaretDoubleRight } from "@phosphor-icons/vue";
+import { personalData } from "@/assets/data/personalData";
 </script>
 <template>
-  <CustomTransition>
-    <div class="about-card what-i-do p-32px">
-      <p class="heading-4">What I Do</p>
-      <div class="what-i-do__content">
-        <div class="what-i-do__content-item">
-          <PhCaretDoubleRight :size="20" />
-          <p class="textL">Branding</p>
-        </div>
-        <div class="what-i-do__content-item">
-          <PhCaretDoubleRight :size="20" />
-          <p class="textL">Illustration</p>
-        </div>
-        <div class="what-i-do__content-item">
-          <PhCaretDoubleRight :size="20" />
-          <p class="textL">Logo Design</p>
-        </div>
-        <div class="what-i-do__content-item">
-          <PhCaretDoubleRight :size="20" />
-          <p class="textL">Typography</p>
-        </div>
-        <div class="what-i-do__content-item">
-          <PhCaretDoubleRight :size="20" />
-          <p class="textL">Card Design</p>
-        </div>
-      </div>
-      <img
-        :src="bottomShape"
-        alt="Bottom Shape"
-        class="bottom-shape light-mood-image-shape"
-      />
-      <img
-        :src="groupShape"
-        alt="Bottom Shape"
-        class="group-shape light-mood-image-shape"
-      /></div
-  ></CustomTransition>
+    <CustomTransition>
+        <section class="about-card what-i-do p-32px">
+            <p class="heading-4">What I Do</p>
+            <div class="what-i-do__content">
+                <p
+                    class="what-i-do__content-item"
+                    v-for="(item, index) in personalData.abilities"
+                    :key="`${item}_${index}`"
+                >
+                    <PhCaretDoubleRight :size="20" />
+                    <span class="textL">{{ item }}</span>
+                </p>
+            </div>
+            <img
+                :src="bottomShape"
+                alt="Bottom Shape"
+                class="bottom-shape light-mood-image-shape"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+            />
+            <img
+                :src="groupShape"
+                alt="Bottom Shape"
+                class="group-shape light-mood-image-shape"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+            />
+        </section>
+    </CustomTransition>
 </template>
 
 <style scoped></style>

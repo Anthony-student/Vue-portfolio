@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import aboutOne from "@/assets/image/about-1.png";
+import aboutOne from "@/assets/image/bio-image-anthony.png";
 import AboutUsBody from "@/components/pages/about/AboutUsBody.vue";
 import AboutTopLeftElement from "@/components/shared/AboutTopLeftElement.vue";
 import EllipseShapeLandingTwoBottomRight from "@/components/shared/EllipseShapeLandingTwoBottomRight.vue";

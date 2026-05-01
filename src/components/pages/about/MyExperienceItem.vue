@@ -9,10 +9,14 @@ defineProps<{ time: string; title: string; company: string }>();
     <PhCaretDoubleRight :size="24" />
     <p class="textM">{{ time }}</p>
     <div class="dash"></div>
-    <p class="textM">{{ title }}</p>
+    <p class="textM title">{{ title }}</p>
     <div class="dash"></div>
     <p class="textM">{{ company }}</p>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.title {
+  max-width: 20ch;
+}
+</style>

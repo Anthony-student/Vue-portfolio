@@ -14,8 +14,6 @@ defineProps<{ image: string }>();
 <template>
     <div class="mt-xxl-10 mt-xl-8 mt-6 position-relative z-2">
         <div class="about-body">
-            <!-- <div class="about-body__1st-row">
-            </div> -->
             <HelloCard />
             <AboutCardProfile :image="image" />
             <div class="about-body__2nd-row">

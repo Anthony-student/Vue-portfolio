@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import bioImage from "@/assets/image/bio-image.png";
+import bioImage from "@/assets/image/bio-image-anthony.png";
 import bioRoundedImage from "@/assets/image/bio-round-text.png";
 import ButtonPrimary from "@/components/shared/ButtonPrimary.vue";
 import CustomTransition from "@/components/shared/CustomTransition.vue";
