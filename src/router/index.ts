@@ -95,6 +95,7 @@ const router = createRouter({
         },
         {
             path: "/in-construction",
+            name: "in-construction",
             component: InConstruction,
             meta: {
                 layout: EmptyLayoutVue,

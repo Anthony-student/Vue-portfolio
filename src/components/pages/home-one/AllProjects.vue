@@ -1,5 +1,5 @@
  <script setup lang="ts">
-import allProjectImage from "@/assets/image/all-project-image.png";
+import qmobielWebsiteImage from "@/assets/image/qmobiel-website.png";
 import allProjectStars from "@/assets/image/all-project-stars.png";
 import CustomTransition from "@/components/shared/CustomTransition.vue";
 import LinkPrimary from "@/components/shared/LinkPrimary.vue";
@@ -15,9 +15,10 @@ import LinkPrimary from "@/components/shared/LinkPrimary.vue";
             </h4>
 
             <img
-                :src="allProjectImage"
+                :src="qmobielWebsiteImage"
                 alt="All Project Image"
                 class="all-projects-card__image"
+                width="200"
             />
             <LinkPrimary
                 linkText="All Projects"
