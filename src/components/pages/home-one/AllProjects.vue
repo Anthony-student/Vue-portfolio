@@ -21,7 +21,7 @@ import LinkPrimary from "@/components/shared/LinkPrimary.vue";
             />
             <LinkPrimary
                 linkText="All Projects"
-                link="/customAll-projects"
+                :link="{ name: 'all-projects' }"
                 class="all-projects-card__link"
             />
 

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import imageShape from "@/assets/image/landing-two-profile-shapepng.png";
 import CustomTransition from "@/components/shared/CustomTransition.vue";
-import bioImage from "@/assets/image/bio-image-anthony.png"
 
 defineProps<{ image: string }>();
 </script>
@@ -10,7 +9,7 @@ defineProps<{ image: string }>();
         <div class="about-card card-profile-image">
             <div class="card-profile-image__image-container">
                 <img
-                    :src="bioImage"
+                    :src="image"
                     alt="Landing bio image"
                     class="profile-image"
                     width="260"

@@ -1,112 +1,88 @@
 import EmptyLayoutVue from "@/layouts/EmptyLayout.vue";
 import About from "@/pages/About.vue";
-import AboutTwoVue from "@/pages/AboutTwo.vue";
-import AllProjectsPage from "@/pages/AllProjectsPage.vue";
-import BlogDetails from "@/pages/BlogDetails.vue";
-import Blogs from "@/pages/Blogs.vue";
 import Contact from "@/pages/Contact.vue";
-import CustomAllProjectsPage from "@/pages/customAllProjectsPage.vue";
-import CustomHome from "@/pages/customHome.vue";
-import CustomServices from "@/pages/customServices.vue";
 import Home from "@/pages/Home.vue";
-import HomeTwo from "@/pages/HomeTwo.vue";
+import InConstruction from "@/pages/InConstruction.vue";
 import NotFound from "@/pages/NotFound.vue";
-import ProjectDetails from "@/pages/ProjectDetails.vue";
 import Services from "@/pages/Services.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        // {
-        //   path: "/",
-        //   component: Home,
-        //   meta: { title: "Home - Grid System Unique Portfolio VueJs Template" },
-        // },
         {
             path: "/",
             name: "home",
             component: Home,
             meta: { title: "Home" },
         },
-        // {
-        //     path: "/customServices",
-        //     component: CustomServices,
-        //     meta: { title: "Custom Services" },
-        // },
-        // {
-        //     path: "/CustomAll-projects",
-        //     name: "all-projects",
-        //     component: CustomAllProjectsPage,
-        //     meta: { title: "all projects" },
-        // },
-        // {
-        //   path: "/CustomAbout-us",
-        //   component: CustomAbout,
-        //   meta: { title: "Custom About us" },
-        // },
-        // {
-        //   path: "/landing-page-two",
-        //   component: HomeTwo,
-        //   meta: { title: "Home Two - Grid System Unique Portfolio VueJs Template" },
-        // },
         {
             path: "/about-us",
             name: "about-us",
             component: About,
             meta: {
-                title: "About - Grid System Unique Portfolio VueJs Template",
+                title: "About",
             },
         },
-        // {
-        //   path: "/about-us-two",
-        //   component: AboutTwoVue,
-        //   meta: { title: "About -Grid System Unique Portfolio VueJs Template" },
-        // },
         {
             path: "/blogs",
             name: "blogs",
-            component: Blogs,
+            redirect: (to) => {
+                return { name: "in-construction" };
+            },
+            // component: Blogs,
             meta: {
                 title: "Blogs -Grid System Unique Portfolio VueJs Template",
             },
         },
         {
             path: "/blog-details",
-            component: BlogDetails,
+            redirect: (to) => {
+                return { name: "in-construction" };
+            },
+            // component: BlogDetails,
             meta: {
-                title: "Blog Details - Grid System Unique Portfolio VueJs Template",
+                title: "Blog Details",
             },
         },
         {
             path: "/all-projects",
             name: "all-projects",
-            component: AllProjectsPage,
+
+            redirect: (to) => {
+                return { name: "in-construction" };
+            },
+            // component: AllProjectsPage,
             meta: {
-                title: "App Projects - Grid System Unique Portfolio VueJs Template",
+                title: "App Projects",
             },
         },
         {
             path: "/project-details",
-            component: ProjectDetails,
+
+            redirect: (to) => {
+                return { name: "in-construction" };
+            },
+            // component: ProjectDetails,
             meta: {
-                title: "App Projects - Grid System Unique Portfolio VueJs Template",
+                title: "App Projects",
             },
         },
         {
             path: "/services",
-            name: 'services',
+            name: "services",
+
             component: Services,
             meta: {
-                title: "Services - Grid System Unique Portfolio VueJs Template",
+                title: "Services",
             },
         },
         {
             path: "/contact",
-            name: 'contact',
+            name: "contact",
             component: Contact,
             meta: {
-                title: "Services - Grid System Unique Portfolio VueJs Template",
+                title: "Services",
             },
         },
         {
@@ -114,7 +90,15 @@ const router = createRouter({
             component: NotFound,
             meta: {
                 layout: EmptyLayoutVue,
-                title: "Not Found - Grid System Unique Portfolio VueJs Template",
+                title: "Not Found",
+            },
+        },
+        {
+            path: "/in-construction",
+            component: InConstruction,
+            meta: {
+                layout: EmptyLayoutVue,
+                title: "construction (web)site",
             },
         },
         {
@@ -122,7 +106,7 @@ const router = createRouter({
             component: NotFound,
             meta: {
                 layout: EmptyLayoutVue,
-                title: "Not Found - Grid System Unique Portfolio VueJs Template",
+                title: "Not Found",
             },
         },
     ],
