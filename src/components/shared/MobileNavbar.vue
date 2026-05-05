@@ -10,61 +10,50 @@ import {
 } from "@phosphor-icons/vue";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
+import banner from "@/assets/image/anthony-logo.png"
 
 const navbarData = [
   {
     id: "menu1",
     icon: PhHouse,
     menuTitle: "Home",
-    path: "#",
-    menuItems: [
-      {
-        id: "homeONe",
-        title: "Home One",
-        menuItemPath: "/",
-      },
-      {
-        id: "homeTwo",
-        title: "Home Two",
-        menuItemPath: "/landing-page-two",
-      },
-    ],
+    path: "/",
   },
   {
     id: "menu2",
     menuTitle: "Blog",
     icon: PhBook,
-    path: "#",
-    menuItems: [
-      {
-        id: "all-blogs",
-        title: "Blogs",
-        menuItemPath: "/blogs",
-      },
-      {
-        id: "Blogs-details",
-        title: "Blog Details",
-        menuItemPath: "/blog-details",
-      },
-    ],
+    path: "/blogs",
+    // menuItems: [
+    //   {
+    //     id: "all-blogs",
+    //     title: "Blogs",
+    //     menuItemPath: "/blogs",
+    //   },
+    //   {
+    //     id: "Blogs-details",
+    //     title: "Blog Details",
+    //     menuItemPath: "/blog-details",
+    //   },
+    // ],
   },
   {
     id: "project",
     menuTitle: "Projects",
     icon: PhBagSimple,
-    path: "#",
-    menuItems: [
-      {
-        id: "all-project",
-        title: "All Project",
-        menuItemPath: "/all-projects",
-      },
-      {
-        id: "project-details",
-        title: "Project Details",
-        menuItemPath: "/project-details",
-      },
-    ],
+    path: "/all-projects",
+    // menuItems: [
+    //   {
+    //     id: "all-project",
+    //     title: "All Project",
+    //     menuItemPath: "/all-projects",
+    //   },
+    //   {
+    //     id: "project-details",
+    //     title: "Project Details",
+    //     menuItemPath: "/project-details",
+    //   },
+    // ],
   },
   {
     id: "services-section",
@@ -141,7 +130,7 @@ const isActive = (item: MenuItem) => {
     :class="`${sidebarToggle ? 'mobile-sidebar-show' : 'mobile-sidebar-hide'}`"
   >
     <router-link :to="{ name: 'home'}" class="d-block logo-main-mobile">
-      Bento<span>X</span>
+      <img :src="banner" height="48px" /> 
     </router-link>
 
     <div class="sidebar-menu-container">

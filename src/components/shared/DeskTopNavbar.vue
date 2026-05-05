@@ -3,6 +3,7 @@ import { navbarData } from "@/assets/data/navbarData";
 import { PhCaretDown } from "@phosphor-icons/vue";
 import { useRoute } from "vue-router";
 import ArrowButton from "./ArrowButton.vue";
+import banner from "@/assets/image/anthony-logo.png"
 
 interface MenuItem {
   id: string;
@@ -30,7 +31,7 @@ const isActive = (item: MenuItem) => {
 <template>
   <div class="desktop-navbar-container">
     <div>
-      <router-link :to="{ name: 'home'}" class="logo-main"> Bento<span>X</span> </router-link>
+      <router-link :to="{ name: 'home'}" class="logo-main"><img :src="banner" height="48px" /> </router-link>
     </div>
     <ul class="desktop-menu-items" id="primary">
       <template v-for="item in navbarData" :key="item.id">
