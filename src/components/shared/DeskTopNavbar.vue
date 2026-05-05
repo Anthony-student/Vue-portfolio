@@ -1,20 +1,9 @@
 <script setup lang="ts">
-import { navbarData } from "@/assets/data/navbarData";
+import { navbarData, type MenuItem } from "@/assets/data/navbarData";
 import { PhCaretDown } from "@phosphor-icons/vue";
 import { useRoute } from "vue-router";
 import ArrowButton from "./ArrowButton.vue";
 import banner from "@/assets/image/anthony-logo.png"
-
-interface MenuItem {
-  id: string;
-  menuTitle: string;
-  path: string;
-  menuItems?: {
-    id: string;
-    title: string;
-    menuItemPath: string;
-  }[];
-}
 
 const currentPath = useRoute();
 

@@ -11,70 +11,7 @@ import {
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import banner from "@/assets/image/anthony-logo.png"
-
-const navbarData = [
-  {
-    id: "menu1",
-    icon: PhHouse,
-    menuTitle: "Home",
-    path: "/",
-  },
-  {
-    id: "menu2",
-    menuTitle: "Blog",
-    icon: PhBook,
-    path: "/blogs",
-    // menuItems: [
-    //   {
-    //     id: "all-blogs",
-    //     title: "Blogs",
-    //     menuItemPath: "/blogs",
-    //   },
-    //   {
-    //     id: "Blogs-details",
-    //     title: "Blog Details",
-    //     menuItemPath: "/blog-details",
-    //   },
-    // ],
-  },
-  {
-    id: "project",
-    menuTitle: "Projects",
-    icon: PhBagSimple,
-    path: "/all-projects",
-    // menuItems: [
-    //   {
-    //     id: "all-project",
-    //     title: "All Project",
-    //     menuItemPath: "/all-projects",
-    //   },
-    //   {
-    //     id: "project-details",
-    //     title: "Project Details",
-    //     menuItemPath: "/project-details",
-    //   },
-    // ],
-  },
-  {
-    id: "services-section",
-    menuTitle: "Services",
-    icon: PhBriefcase,
-    path: "/services",
-  },
-
-  {
-    id: "about-page",
-    icon: PhUsers,
-    menuTitle: "About",
-    path: "/about-us",
-  },
-  {
-    id: "contact-page",
-    icon: PhPhonePlus,
-    menuTitle: "Contact",
-    path: "/contact",
-  },
-];
+import { mobileNavbarData, type MenuItem } from "@/assets/data/navbarData";
 
 defineProps<{
   sidebarToggle: boolean;
@@ -83,17 +20,6 @@ defineProps<{
 }>();
 
 const currentPath = useRoute();
-
-interface MenuItem {
-  id: string;
-  menuTitle: string;
-  path: string;
-  menuItems?: {
-    id: string;
-    title: string;
-    menuItemPath: string;
-  }[];
-}
 
 const dropDown = ref("");
 
@@ -135,7 +61,7 @@ const isActive = (item: MenuItem) => {
 
     <div class="sidebar-menu-container">
       <ul class="mobile-sidebar-menus">
-        <template v-for="item in navbarData">
+        <template v-for="item in mobileNavbarData">
           <li
             v-if="item.menuItems"
             class="position-relative"
