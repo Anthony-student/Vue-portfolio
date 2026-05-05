@@ -7,7 +7,7 @@ defineProps<{ image: string }>();
 <template>
     <CustomTransition>
         <div class="about-card card-profile-image">
-            <div class="card-profile-image__image-container">
+            <section class="card-profile-image__image-container">
                 <img
                     :src="image"
                     alt="Landing bio image"
@@ -20,12 +20,17 @@ defineProps<{ image: string }>();
                     alt="Image Shape"
                     class="profile-shape"
                 />
-            </div>
+            </section>
         </div>
     </CustomTransition>
 </template>
 
 <style scoped>
+
+.card-profile-image__image-container {
+    height: 300px;
+}
+
 .profile-image,
 .profile-shape {
     position: absolute;
