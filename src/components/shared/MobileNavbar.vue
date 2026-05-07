@@ -10,7 +10,7 @@ import {
 } from "@phosphor-icons/vue";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
-import banner from "@/assets/image/anthony-logo.png"
+import banner from "@/assets/image/anthony_logo.png"
 import { mobileNavbarData, type MenuItem } from "@/assets/data/navbarData";
 
 defineProps<{

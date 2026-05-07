@@ -3,7 +3,7 @@ import { navbarData, type MenuItem } from "@/assets/data/navbarData";
 import { PhCaretDown } from "@phosphor-icons/vue";
 import { useRoute } from "vue-router";
 import ArrowButton from "./ArrowButton.vue";
-import banner from "@/assets/image/anthony-logo.png"
+import banner from "@/assets/image/anthony_logo.png"
 
 const currentPath = useRoute();
 
