@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout repository
@@ -32,13 +32,7 @@ jobs:
       - name: Build website
         run: npm run build
 
-      - name: Deploy dist to NAS
-        uses: easingthemes/ssh-deploy@v5.1.0
-        with:
-          SSH_PRIVATE_KEY: ${{ secrets.NAS_DEPLOY_KEY }}
-          REMOTE_HOST: ${{ secrets.NAS_HOST }}
-          REMOTE_USER: ${{ secrets.NAS_USER }}
-          REMOTE_PORT: ${{ secrets.NAS_PORT }}
-          SOURCE: "dist/"
-          TARGET: ${{ secrets.NAS_TARGET_PATH }}
-          ARGS: "-rlgoDzvc"
+      - name: Deploy dist locally
+        run: |
+          rm -rf /volume3/docker-ssd/portfolio/html/*
+          cp -r dist/* /volume3/docker-ssd/portfolio/html/
