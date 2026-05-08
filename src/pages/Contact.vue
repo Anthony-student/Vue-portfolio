@@ -11,8 +11,6 @@ import AfterEffect from '@/components/shared/AfterEffect.vue';
     <ContactBody />
   </div>
   <AfterEffect />
-  <AboutTopLeftElement />
-  <ServiceBottomRight />
 </template>
 
 <style scoped></style>

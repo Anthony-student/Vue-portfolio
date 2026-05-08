@@ -1,16 +1,16 @@
 <script setup lang="ts">
 defineProps<{
-  year: string;
-  title: string;
-  university: string;
+    year: string;
+    title: string;
+    university: string;
 }>();
 </script>
 <template>
-  <div class="about-education__content-item">
-    <p class="textM year">{{ year }}</p>
-    <p class="textXL title">{{ title }}</p>
-    <p class="textM university">{{ university }}</p>
-  </div>
+    <article class="about-education__content-item">
+        <p class="textM year">{{ year }}</p>
+        <h4 class="textXL title">{{ title }}</h4>
+        <p class="textM university">{{ university }}</p>
+    </article>
 </template>
 
 <style scoped></style>

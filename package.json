@@ -11,12 +11,14 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@phosphor-icons/vue": "^2.1.6",
     "@vueuse/core": "^10.8.0",
     "bootstrap": "^5.3.3",
     "swiper": "^11.0.6",
     "vue": "^3.4.15",
     "vue-countup-v3": "^1.4.1",
+    "vue-i18n": "^11.4.2",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {

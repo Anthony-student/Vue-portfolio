@@ -20,7 +20,7 @@ import LinkPrimaryTwo from "./LinkPrimaryTwo.vue";
           class="biography-style__bio-shape"
         />
       </div>
-      <router-link to="/contact">
+      <router-link :to="{ name: 'contact'}">
         <PhPaperPlaneTilt :size="32" class="biography-style__send-icon" />
       </router-link>
       <div class="biography-style__button-text">

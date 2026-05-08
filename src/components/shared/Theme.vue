@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { PhGearSix } from "@phosphor-icons/vue";
+import { PhCaretDown, PhGearSix } from "@phosphor-icons/vue";
 import { useDark, useToggle } from "@vueuse/core";
-import { onMounted, ref } from "vue";
+import { computed, ref } from "vue";
+
+import { getLanguage, setLanguage, SUPPORTED_LOCALES } from "@/languages/i18nUtils";
 
 const isDark = useDark({
   selector: "body",
@@ -11,57 +13,59 @@ const isDark = useDark({
 });
 
 const modalOpen = ref(false);
-
-const toggleThemeModal = () => {
-  modalOpen.value = true;
-};
+const toggleThemeModal = () => (modalOpen.value = !modalOpen.value);
 
 const toggleDark = useToggle(isDark);
-
 const handleThemeSwitch = () => {
   toggleDark();
   modalOpen.value = false;
 };
 
-const dirValue = ref(localStorage.getItem("dir") || "ltr");
+// dropdown state
+const currentLang = computed(() => getLanguage());
 
-const localStoreDir = localStorage.getItem("dir");
-
-onMounted(() => {
-  if (!localStoreDir) {
-    localStorage.setItem("dir", dirValue.value);
-  }
-  document.documentElement.dir = dirValue.value;
-});
-
-function handleDir() {
-  if (dirValue.value == "ltr") {
-    localStorage.setItem("dir", "rtl");
-    dirValue.value = "rtl";
-  } else {
-    localStorage.setItem("dir", "ltr");
-    dirValue.value = "ltr";
-  }
-  document.documentElement.dir = dirValue.value;
+function handleLanguageChange(e: Event) {
+  const value = (e.target as HTMLSelectElement).value;
+  setLanguage(value as any); // i18nUtils will normalize + validate anyway
   modalOpen.value = false;
 }
 </script>
 
 <template>
   <div class="theme-modal-button" @click="toggleThemeModal">
-    <button>
+    <button type="button">
       <PhGearSix :size="32" color="#ff6900" class="rotating setting-icon" />
     </button>
   </div>
 
-  <div class="theme-modal" :class="`${modalOpen ? 'modal-open' : ''}`">
-    <button class="theme-modal__theme-dir" @click="handleDir">
-      {{ dirValue === "ltr" ? "RTL" : "LTR" }}
-    </button>
-    <button class="theme-modal__theme-dir" @click="handleThemeSwitch">
+  <div class="theme-modal" :class="modalOpen ? 'modal-open' : ''">
+    <div class="theme-modal__select-wrap">
+      <label for="lang-select" class="sr-only">Language</label>
+
+      <select
+        id="lang-select"
+        class="theme-modal__select"
+        :value="currentLang"
+        @change="handleLanguageChange"
+      >
+        <option
+          v-for="locale in SUPPORTED_LOCALES"
+          :key="locale"
+          :value="locale"
+        >
+          {{ locale.toUpperCase() }}
+        </option>
+      </select>
+
+      <PhCaretDown class="theme-modal__select-arrow" aria-hidden="true" />
+    </div>
+
+    <button
+      class="theme-modal__theme-dir"
+      type="button"
+      @click="handleThemeSwitch"
+    >
       {{ isDark ? "Light" : "Dark" }}
     </button>
   </div>
 </template>
-
-<style scoped></style>

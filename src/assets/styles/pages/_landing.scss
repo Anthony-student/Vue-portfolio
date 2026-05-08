@@ -246,7 +246,7 @@
   }
 
   @media (max-width: 1400px) {
-    padding: 23px 0px 22px 16px;
+    padding: 23px 0px 23px 16px;
   }
 
   .marquee-wrapper {
@@ -454,8 +454,8 @@
   padding-bottom: 38px;
 
   @media (max-width: 1400px) {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   &__title {
@@ -628,6 +628,18 @@
       border: none;
     }
 
+    a {
+      color: var(--secondary-color);
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+      text-decoration: underline;
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  &__copyright-text {
     a {
       color: var(--secondary-color);
       font-weight: 500;

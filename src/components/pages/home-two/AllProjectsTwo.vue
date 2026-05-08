@@ -18,7 +18,7 @@ import LinkPrimaryTwo from "./LinkPrimaryTwo.vue";
       />
       <LinkPrimaryTwo
         linkText="All Projects"
-        link="/all-projects"
+        :link="{ name: 'all-projects' }"
         class="all-projects-card-two__link"
       />
       <img

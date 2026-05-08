@@ -1,33 +1,20 @@
 <script setup lang="ts">
 import CustomTransition from "@/components/shared/CustomTransition.vue";
 import ExperienceCardItemAbout from "./ExperienceCardItemAbout.vue";
+import { personalData } from "@/assets/data/personalData";
+
 </script>
 <template>
   <CustomTransition>
-    <div class="about-card experience-in-number">
+    <section class="about-card experience-in-number">
       <ExperienceCardItemAbout
-        :counterNumber="7"
-        text="YEARS EXPERIENCE"
-        counterElement="0"
-        rightElement="+"
+        v-for="(experience, index) in personalData.experiences"
+                :key="`${experience.name}_${index}`"
+                :counterNumber="+experience.count"
+                :text="experience.name"
+                :counterElement="experience.prefix"
       />
-      <ExperienceCardItemAbout
-        :counterNumber="125"
-        text="TOTAL PROJECTS"
-        counterElement="+"
-      />
-
-      <ExperienceCardItemAbout
-        :counterNumber="9"
-        text="RECOGNITIONS"
-        counterElement="0"
-      />
-      <ExperienceCardItemAbout
-        :counterNumber="0"
-        text="UNHAPPY CLIENTS"
-        counterElement="0"
-      />
-    </div>
+    </section>
   </CustomTransition>
 </template>
 

@@ -16,13 +16,16 @@ import LinkPrimary from "@/components/shared/LinkPrimary.vue";
 
             <LinkPrimary
                 linkText="All Blogs"
-                link="/blogs"
+                :link="{ name: 'blogs'}"
                 class="all-blog-card__link"
             />
             <img
                 :src="allBlogsStar"
                 alt="Title Card Shape"
                 class="all-blog-card__shapes-image-articles light-mood-image-shape"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
             />
         </section>
     </CustomTransition>

@@ -16,11 +16,12 @@ const handleToggle = () => {
 </script>
 
 <template>
-  <div class="navbar-container container position-relative z-3">
+  <nav class="navbar-container container position-relative z-3">
     <!-- desktop navbar -->
     <DeskTopNavbar />
+
     <!-- mobile navbar -->
-    <div class="mobile-navbar-container bg-light-white">
+    <section class="mobile-navbar-container bg-light-white">
       <div
         class="hamburger"
         :class="`${sidebarToggle ? 'is-active' : ''}`"
@@ -32,7 +33,9 @@ const handleToggle = () => {
         </div>
       </div>
       <ArrowButton link="/contact" />
-    </div>
+    </section>
+
+    <!-- mobile navbar menu -->
     <MobileNavbar :sidebarToggle="sidebarToggle" :handleToggle="handleToggle" :handleFalse="handleFalse"/>
-  </div>
+  </nav>
 </template>

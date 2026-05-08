@@ -1,34 +1,34 @@
-import CustomTransition from '@/components/shared/CustomTransition.vue';
 <script setup lang="ts">
 import CustomTransition from "@/components/shared/CustomTransition.vue";
 import {
-  PhAngularLogo,
+  PhCodepenLogo,
   PhFigmaLogo,
-  PhFilmStrip,
-  PhFramerLogo,
+  PhGithubLogo,
+  PhGitlabLogo,
+  PhMicrosoftTeamsLogo,
   PhPencil,
-  PhSketchLogo,
+  PhStackOverflowLogo,
 } from "@phosphor-icons/vue";
 
 const sliderOneData = [
-  "UX Design",
-  "UI Design",
-  "Product Design",
-  "Workshops",
-  "Design Sprient",
-  "Design",
-  "UX Design",
-  "UI Design",
-  "Product Design",
-  "Workshops",
-  "Design Sprient",
-  "Design",
-  "UX Design",
-  "UI Design",
-  "Product Design",
-  "Workshops",
-  "Design Sprient",
-  "Design",
+  "UI/UX Design",
+  "Components",
+  "Maintainability",
+  "Web development",
+  "App development",
+  "Accesible UI",
+  "UI/UX Design",
+  "Components",
+  "Maintainability",
+  "Web development",
+  "App development",
+  "Accesible UI",
+  "UI/UX Design",
+  "Components",
+  "Maintainability",
+  "Web development",
+  "App development",
+  "Accesible UI",
 ];
 
 const sliderTwo = [
@@ -36,55 +36,64 @@ const sliderTwo = [
     icon: PhFigmaLogo,
   },
   {
-    icon: PhFilmStrip,
+    icon: PhStackOverflowLogo,
   },
   {
-    icon: PhSketchLogo,
+    icon: PhGithubLogo,
+  },
+  {
+    icon: PhGitlabLogo,
   },
   {
     icon: PhPencil,
   },
   {
-    icon: PhFramerLogo,
+    icon: PhMicrosoftTeamsLogo,
   },
   {
-    icon: PhAngularLogo,
+    icon: PhCodepenLogo,
   },
   {
     icon: PhFigmaLogo,
   },
   {
-    icon: PhFilmStrip,
+    icon: PhStackOverflowLogo,
+  },
+  {
+    icon: PhGithubLogo,
+  },
+  {
+    icon: PhGitlabLogo,
   },
   {
     icon: PhPencil,
   },
   {
-    icon: PhSketchLogo,
+    icon: PhMicrosoftTeamsLogo,
   },
   {
-    icon: PhFilmStrip,
-  },
-  {
-    icon: PhFramerLogo,
+    icon: PhCodepenLogo,
   },
   {
     icon: PhFigmaLogo,
   },
   {
-    icon: PhFilmStrip,
+    icon: PhStackOverflowLogo,
+  },
+  {
+    icon: PhGithubLogo,
+  },
+  {
+    icon: PhGitlabLogo,
   },
   {
     icon: PhPencil,
   },
   {
-    icon: PhSketchLogo,
+    icon: PhMicrosoftTeamsLogo,
   },
   {
-    icon: PhFilmStrip,
-  },
-  {
-    icon: PhFramerLogo,
+    icon: PhCodepenLogo,
   },
 ];
 </script>
@@ -100,6 +109,7 @@ const sliderTwo = [
               <li class="marquee-item">
                 <span
                   v-for="(item, index) in sliderOneData"
+                  :key="`skill-slider-one-${index}`"
                   class="skills-card__slider-text"
                 >
                   {{ item }}
@@ -115,7 +125,7 @@ const sliderTwo = [
               <li class="marquee-item">
                 <span
                   v-for="({ icon }, index) in sliderTwo"
-                  key="{`skill-slider-two${index}`}"
+                  :key="`skill-slider-two-${index}`"
                   class="skills-card__slider-two__box"
                 >
                   <component :is="icon" size="32"></component>

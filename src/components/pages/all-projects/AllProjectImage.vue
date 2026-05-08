@@ -13,30 +13,30 @@ defineProps<{
 </script>
 <template>
   <CustomTransition>
-    <div class="image-body">
+    <section class="image-body">
       <img
         :src="image"
         alt="All Projects image 11"
         class="image-body__image img-fluid"
       />
       <router-link to="/project-details" class="all-project-link">
-        <span class="all-project-link__text-area">
-          <span class="link-title heading-2">Aroha agency website</span>
-          <span class="textL link-text">
-            An 12 month long inquiry into italine design,history and culture.
-          </span>
-        </span>
-        <span class="all-project-link__image">
+        <article class="all-project-link__text-area">
+          <h4 class="link-title heading-2">{{ title }}</h4>
+          <p class="textL link-text">
+            {{ text }}
+          </p>
+        </article>
+        <nav class="all-project-link__image">
           <img
             :src="linkImage"
             width="{175}"
             height="{100}"
-            alt="All Project Link image"
+            alt="Go to project detail page"
             class="img-fluid"
           />
-        </span>
+        </nav>
       </router-link>
-    </div>
+    </section>
   </CustomTransition>
 </template>
 
