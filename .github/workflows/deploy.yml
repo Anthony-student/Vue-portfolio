@@ -1,0 +1,44 @@
+name: Build and deploy portfolio
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-portfolio
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build website
+        run: npm run build
+
+      - name: Deploy dist to NAS
+        uses: easingthemes/ssh-deploy@v5.1.0
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.NAS_DEPLOY_KEY }}
+          REMOTE_HOST: ${{ secrets.NAS_HOST }}
+          REMOTE_USER: ${{ secrets.NAS_USER }}
+          REMOTE_PORT: ${{ secrets.NAS_PORT }}
+          SOURCE: "dist/"
+          TARGET: ${{ secrets.NAS_TARGET_PATH }}
+          ARGS: "-rlgoDzvc"
